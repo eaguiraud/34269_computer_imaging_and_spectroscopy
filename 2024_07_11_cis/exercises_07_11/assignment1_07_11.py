@@ -3,17 +3,16 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Load the image
-
-image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/2024_07_11_cis/34269_AWB/1001.png'
+image_path = 'blue_cast.jpg'
 image = cv2.imread(image_path)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-# # Display the original image
-# plt.figure(figsize=(10, 10))
-# plt.imshow(image)
-# plt.title('Original Image')
-# plt.axis('off')
-# plt.show()
+# Display the original image
+plt.figure(figsize=(10, 10))
+plt.imshow(image)
+plt.title('Original Image with Blue Cast')
+plt.axis('off')
+plt.show()
 
 # Method 1: Gray World Assumption
 def gray_world_assumption(image):
