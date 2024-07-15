@@ -1,30 +1,46 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from skimage.util import random_noise
 
+def sobel_edge_detector(image_path):
+    # Read the image using OpenCV
+    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
-# Load another image
-image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/2024_07_11_cis/segmentation_key_points/Ex_SegmentationKeypoints/imSeg/Fish.jpg'  
-another_image = cv2.imread(image_path)
-another_image_gray = cv2.cvtColor(another_image, cv2.COLOR_BGR2GRAY)
+    # Apply Sobel operator
+    sobel_x = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=3)
+    sobel_y = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize=3)
 
-# Apply Gaussian blur
-blurred_image = cv2.GaussianBlur(another_image_gray, (5, 5), 0)
+    # Calculate gradient magnitude
+    magnitude = np.sqrt(sobel_x**2 + sobel_y**2)
 
-# Apply Otsu's thresholding
-_, binary_image = cv2.threshold(blurred_image, 0, 150, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    # Apply a threshold to identify edges
+    threshold = 50
+    edges = magnitude > threshold
 
-# Display the result
+    return edges
+
+# Example usage
+image_path = 'tmp/edge_detection/Bikesgray.jpg'
+edge_image = sobel_edge_detector(image_path)
+
+# Display the original and edge-detected images
+original_image = cv2.imread(image_path)
+original_image_rgb = cv2.cvtColor(original_image, cv2.COLOR_BGR2RGB)
+
+# Plotting the images using matplotlib
 plt.figure(figsize=(10, 5))
+
+# Original Image
 plt.subplot(1, 2, 1)
+plt.imshow(original_image_rgb)
 plt.title('Original Image')
-plt.imshow(cv2.cvtColor(another_image, cv2.COLOR_BGR2RGB))
 plt.axis('off')
 
+# Edge-detected Image
 plt.subplot(1, 2, 2)
-plt.title('Segmented Image')
-plt.imshow(binary_image, cmap='gray')
+plt.imshow(edge_image, cmap='gray')
+plt.title('Edge-detected Image (Sobel)')
 plt.axis('off')
 
+# Display the images
 plt.show()
