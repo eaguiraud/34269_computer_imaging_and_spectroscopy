@@ -1,0 +1,9 @@
+Low light enhancement 
+
+Histogram Equalization with Ilumination adjustment
+Ilumination estimation and white balancing 
+single scale retinex 
+multi scale retinex 
+Multi Scale Retinex with Color Restoration
+Multi Scale Retinex with Color Preservation
+****if previous methods prove succesful, we will continue with deep learning models **** (remember to include ablation study if there is enough time)
