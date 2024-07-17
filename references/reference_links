@@ -30,4 +30,10 @@ https://santhalakshminarayana.github.io/blog/retinex-image-enhancement
 
 https://arxiv.org/pdf/2404.14248    ####NTIRE challenge, recommendation to take a look at by the professor   
 
+<<<<<<< HEAD
 https://ieeexplore-ieee-org.proxy.findit.cvt.dk/stamp/stamp.jsp?tp=&arnumber=9687862 # Histogram equalisation BBHE and BPHEME
+=======
+https://ieeexplore-ieee-org.proxy.findit.cvt.dk/stamp/stamp.jsp?tp=&arnumber=9687862 # Histogram equalisation BBHE
+
+https://medium.com/hackernoon/histogram-equalization-in-python-from-scratch-ebb9c8aa3f23#:~:text=Histogram%20Equalization%20is%20one%20of,more%20equal%20across%20the%20board.
+>>>>>>> 12adaef (added HPC guide link to the reference_links file)
