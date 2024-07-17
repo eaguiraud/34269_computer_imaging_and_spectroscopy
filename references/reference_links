@@ -35,5 +35,8 @@ https://ieeexplore-ieee-org.proxy.findit.cvt.dk/stamp/stamp.jsp?tp=&arnumber=968
 =======
 https://ieeexplore-ieee-org.proxy.findit.cvt.dk/stamp/stamp.jsp?tp=&arnumber=9687862 # Histogram equalisation BBHE
 
+<<<<<<< HEAD
 https://medium.com/hackernoon/histogram-equalization-in-python-from-scratch-ebb9c8aa3f23#:~:text=Histogram%20Equalization%20is%20one%20of,more%20equal%20across%20the%20board.
 >>>>>>> 12adaef (added HPC guide link to the reference_links file)
+=======
+>>>>>>> abe0de1 (removed HPC guide)
