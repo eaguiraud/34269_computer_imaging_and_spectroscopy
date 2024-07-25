@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from skimage.util import random_noise
 
 # Load the image
-image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/2024_07_11_cis/segmentation_key_points/Ex_SegmentationKeypoints/imSeg/Blob.tif'
+image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/2024_07_11_cis/segmentation_key_points/Ex_SegmentationKeypoints/imSeg/Eagle.jpg'
+#image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/2024_07_11_cis/34269_AWB/Blue_cast.jpg'
 blob_image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
 # Apply Sobel edge detection
@@ -28,7 +29,7 @@ plt.show()
 
 
 # Add Gaussian white noise
-noisy_image = random_noise(blob_image, mode='gaussian', var=0.01)
+noisy_image = random_noise(blob_image, mode='gaussian', var=0.05)
 noisy_image = (255*noisy_image).astype(np.uint8)
 
 # Reapply Sobel edge detection
