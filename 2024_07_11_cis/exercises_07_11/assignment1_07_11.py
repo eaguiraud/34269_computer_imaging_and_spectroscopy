@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Load the image
-image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/low_light_enhancement/images/city.jpg'
+image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/low_light_enhancement/images/dark_img_1.png'
 
 # image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/2024_07_11_cis/34269_AWB/Blue_cast.jpg'
 # // image_path = '/home/eaguiraud/Documents/34269_computer_imaging_and_spectroscopy/2024_07_11_cis/34269_AWB/archive/files/cancer/42.jpg'
